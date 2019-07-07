@@ -12,16 +12,14 @@ def load_csv_file(csv_file):
 
     Examples:
         >>> cat csv_file
-        username,password
-        test1,111111
-        test2,222222
-        test3,333333
+        environment,host,port
+        ci,localhost,27017
+        e2e,localhost,27018
 
         >>> load_csv_file(csv_file)
         [
-            {'username': 'test1', 'password': '111111'},
-            {'username': 'test2', 'password': '222222'},
-            {'username': 'test3', 'password': '333333'}
+            {'environment': 'ci', 'host': 'localhost', 'port': '27017'},
+            {'environment': 'e2e', 'host': 'localhost', 'port': '27018'}
         ]
 
     """
